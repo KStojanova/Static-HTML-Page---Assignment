@@ -1,0 +1,150 @@
+.pricing-plans {
+  margin: 50px;
+  .text {
+    text-align: center;
+    h1 {
+      word-spacing: 2px;
+      margin: 10px;
+      font-size: 36px;
+      padding: 10px;
+      letter-spacing: 2px;
+    }
+  }
+  .plans {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+
+  .plan {
+    margin: 20px;
+    max-width: 400px;
+    border-radius: 20px;
+
+    .header {
+      display: flex;
+      img,
+      h3 {
+        margin: 15px;
+      }
+    }
+    .price {
+      font-size: 24px;
+      letter-spacing: 2px;
+      font-weight: 900;
+      margin-left: 20px;
+      #price1,
+      #price2 {
+        display: inline;
+      }
+      .month {
+        display: inline;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+    .heading {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 15px;
+      margin: 10px 20px;
+    }
+    ul {
+      padding: 15px;
+      li {
+        padding: 9px;
+        font-weight: 400;
+      }
+    }
+  }
+  .basic {
+    border: 4px solid gray;
+    height: fit-content;
+    h3 {
+      color: gray;
+      font-size: 22px;
+    }
+    li {
+      span {
+        color: gray;
+        font-size: x-large;
+      }
+    }
+    .price-btn {
+      color: gray;
+      background: transparent;
+      border: 3px solid gray;
+    }
+  }
+  .premium {
+    border: 4px solid red;
+    h3 {
+      color: red;
+      font-size: 22px;
+    }
+    li {
+      span {
+        color: green;
+        font-size: x-large;
+      }
+    }
+    .price-btn {
+      color: white;
+      background: green;
+      border: 3px solid transparent;
+    }
+  }
+  .business {
+    border: 4px solid black;
+    h3 {
+      color: black;
+      font-size: 22px;
+    }
+    li {
+      span {
+        color: black;
+        font-size: x-large;
+      }
+    }
+    .price-btn {
+      color: white;
+      background: black;
+      border: 3px solid transparent;
+    }
+  }
+
+  li {
+    list-style: none;
+  }
+  .price-btn {
+    font-size: 23px;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    width: 80%;
+    padding: 10px;
+    margin: 20px auto;
+  }
+}
+input:checked ~ .plan-content {
+  display: block;
+}
+
+@media screen and (max-width: 980px) {
+  .plans {
+    display: block !important;
+    .plan-content {
+      display: none;
+    }
+  }
+  input:checked ~ .plan-content {
+    display: block;
+  }
+}
